@@ -1,6 +1,7 @@
 import React from 'react';
 import Clients from '../clients/Clients';
 import Sidebar from './Sidebar';
+import '../../styles/Dashboard.css';
 
 const Dashboard = () => {
   return (

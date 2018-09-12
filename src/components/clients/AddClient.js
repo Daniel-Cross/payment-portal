@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 // import { connect } from 'react-redux';
 import { firestoreConnect } from 'react-redux-firebase';
 import PropTypes from 'prop-types';
+import '../../styles/AddClient.css';
 
 class AddClient extends Component {
   state = {
@@ -48,6 +49,7 @@ class AddClient extends Component {
             </Link>
           </div>
         </div>
+
         <div className="card">
           <h1 className="card-header">Add Client</h1>
           <div className="card-body">
