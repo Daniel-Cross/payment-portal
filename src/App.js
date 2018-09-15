@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Dashboard from './components/layout/Dashboard';
 import Navbar from './components/layout/Navbar';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './store';
 import AddClient from './components/clients/AddClient';
@@ -10,7 +10,8 @@ import ClientDetails from './components/clients/ClientDetails';
 import EditClient from './components/clients/EditClient';
 import Login from './components/auth/Login';
 import { UserIsAuthenticated, UserIsNotAuthenticated } from './helpers/auth';
-import Settings from './components/settings/Settings';
+import { eventNames } from 'cluster';
+// import Settings from './components/settings/Settings';
 
 class App extends Component {
   render() {
@@ -46,11 +47,11 @@ class App extends Component {
                   path="/login"
                   component={UserIsNotAuthenticated(Login)}
                 />
-                <Route
+                {/* <Route
                   exact
                   path="/settings"
                   component={UserIsAuthenticated(Settings)}
-                />
+                /> */}
               </Switch>
             </div>
           </div>
